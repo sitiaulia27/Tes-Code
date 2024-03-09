@@ -13,7 +13,7 @@
         </ul>
         <ul class="sidebar-menu">
             <li class="dropdown">
-                <a href="" class="nav-link"><i class="fas fa-user"></i><span>Data Score</span></a>
+                <a href="{{ route('score.index') }}" class="nav-link"><i class="fas fa-user"></i><span>Data Score</span></a>
             </li>
         </ul>
     </aside>

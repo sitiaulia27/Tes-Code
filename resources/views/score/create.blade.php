@@ -12,7 +12,7 @@
         <div class="card">
             <div class="col-md-7">
                 <div class="card-body">
-                <form action="{{ route('club.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('score.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         @if(Session::has('success'))
@@ -22,11 +22,11 @@
                         @endif
 
                         <div class="mb-3">
-                            <label for="kategori">Nama Kategori</label>
-                            <select id="kategori" name="id" data-placeholder="kategori" class="custom-select w-100">
-                                @foreach ($kategoris as $kategori)
-                                    <option value="{{ $kategori->id }}" {{ $edit->kategori->id == $kategori->id ? 'selected' : '' }}>
-                                    {{ $kategori->nama }}
+                            <label for="club">Nama Club</label>
+                            <select id="club" name="id" data-placeholder="club" class="custom-select w-100">
+                                @foreach ($clubs as $club)
+                                    <option value="{{ $kategori->id }}" {{ $edit->club->id == $club->id ? 'selected' : '' }}>
+                                    {{ $club->name }}
                                     </option>
                                 @endforeach
                             </select>
