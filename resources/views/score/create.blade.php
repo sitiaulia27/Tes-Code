@@ -24,20 +24,12 @@
                         <div class="mb-3">
                             <label for="club">Nama Club</label>
                             <select id="club" name="id" data-placeholder="club" class="custom-select w-100">
-                                @foreach ($clubs as $club)
-                                    <option value="{{ $kategori->id }}" {{ $edit->club->id == $club->id ? 'selected' : '' }}>
-                                    {{ $club->name }}
-                                    </option>
-                                @endforeach
                             </select>
-                            @error('id')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="kota" class="form-label">Kota</label>
-                            <select name="result" id="result">
-                                <option value="win">Win</option>
+                            <label for="score">Hasil</label>
+                            <select id="score" name="id" data-placeholder="club" class="custom-select w-100">
+                            <option value="win">Win</option>
                                 <option value="draw">Draw</option>
                                 <option value="lose">Lose</option>
                             </select>
